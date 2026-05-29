@@ -56,7 +56,11 @@ defmodule LpQuestions.SemCauda do
   def multiplicar_elementos([]), do: 1
   def multiplicar_elementos([h | t]), do: h * multiplicar_elementos(t)
 
-  # # 14 & 24. Pertence?
+  # # 14. Pertence?
+  def pertence?(_elemento, []), do: false
+  def pertence?(elemento, [h | t]), do: h == elemento or pertence?(elemento, t)
+
+  # # 24. Pertence?
   def pertence?(_elemento, []), do: false
   def pertence?(elemento, [h | t]), do: h == elemento or pertence?(elemento, t)
 
@@ -123,7 +127,6 @@ defmodule LpQuestions.SemCauda do
       intersecao(t, conjunto_B)
     end
   end
-
   # # 25. subconjunto?
   def subconjunto?([], _conjunto_B), do: true
 

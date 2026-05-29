@@ -91,8 +91,11 @@ defmodule LpQuestions.ComCauda do
   defp multiplicar_elementos_cauda([], acc), do: acc
   defp multiplicar_elementos_cauda([h | t], acc), do: multiplicar_elementos_cauda(t, acc * h)
 
-  # # 14 & 24. Pertence?
+  # # 14. Pertence?
   def pertence?(elemento, lista), do: pertence_cauda(elemento, lista)
+
+  # # 24. Pertence?
+  def pertence?(elemento, conjunto), do: pertence_cauda(elemento, conjunto)
 
   defp pertence_cauda(_elemento, []), do: false
   defp pertence_cauda(elemento, [elemento | _t]), do: true

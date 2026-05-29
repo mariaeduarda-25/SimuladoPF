@@ -85,7 +85,13 @@ defmodule LpQuestionsTest do
         assert unquote(module).multiplicar_elementos([2, 3, 4]) == 24
       end
 
-      test "Q14 & Q24: pertence?/2" do
+      test "Q14: pertence?/2 (elemento, lista)" do
+        assert unquote(module).pertence?(3, [1, 2, 3, 4]) == true
+        assert unquote(module).pertence?(5, [1, 2, 3, 4]) == false
+        assert unquote(module).pertence?(1, []) == false
+      end
+
+      test "Q24: pertence?/2 (elemento, conjunto)" do
         assert unquote(module).pertence?(3, [1, 2, 3, 4]) == true
         assert unquote(module).pertence?(5, [1, 2, 3, 4]) == false
         assert unquote(module).pertence?(1, []) == false
